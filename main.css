@@ -1488,7 +1488,7 @@ img {
     height: auto;
   }
   .blog .blog-bottom ul li .pic1 {
-    background-image: url(/img/blog1.jpg);
+    background-image: url(blog1.jpg);
     height: 100px;
     border-radius: 20px 20px 0 0;
     background-position: center;
@@ -1496,7 +1496,7 @@ img {
        object-fit: cover;
   }
   .blog .blog-bottom ul li .pic2 {
-    background-image: url(/img/blog2.jpg);
+    background-image: url(blog2.jpg);
     height: 100px;
     border-radius: 20px 20px 0 0;
     background-position: center;
@@ -1504,7 +1504,7 @@ img {
        object-fit: cover;
   }
   .blog .blog-bottom ul li .pic3 {
-    background-image: url(/img/blog3.jpg);
+    background-image: url(blog3.jpg);
     height: 100px;
     border-radius: 20px 20px 0 0;
     background-position: center;
