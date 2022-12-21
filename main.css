@@ -1,0 +1,1607 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+.change {
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: whitesmoke;
+  padding: 1em;
+  height: 10vh;
+}
+.nav .btn {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+.nav .btn:hover {
+  transform: scale(105%);
+}
+.nav .logo img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+.nav .navbar ul {
+  display: flex;
+}
+.nav .navbar ul .current {
+  color: rgb(27, 230, 162);
+  font-weight: bold;
+  transition: font-weight 3s, color 0.5s;
+}
+.nav .navbar ul .current:hover {
+  font-weight: bold;
+  color: blue;
+}
+.nav .navbar ul li {
+  margin-right: 4rem;
+  position: relative;
+}
+.nav .navbar ul a {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: blueviolet;
+  transition: letter-spacing 0.3s ease-in-out;
+}
+.nav .navbar ul a::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 1px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav .navbar ul a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.nav .navbar ul a:hover {
+  letter-spacing: 0.1rem;
+}
+.nav .btn {
+  display: inline-block;
+  background-color: rgb(27, 230, 162);
+  border-radius: 25px;
+  text-transform: capitalize;
+  padding: 0.3rem 0.7rem;
+  color: white;
+}
+
+.sect {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(/img/blog.svg);
+}
+.sect .home {
+  padding: 5em 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3em;
+  grid-template-areas: "left right";
+}
+.sect .home .right {
+  grid-area: left;
+}
+.sect .home .right h2 {
+  color: orangered;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+.sect .home .right h1 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  line-height: 1.2em;
+  margin-bottom: 1rem;
+  font-family: "Dancing script", sans-serif;
+}
+.sect .home .right p {
+  font-size: 0.9rem;
+  color: rgb(54, 50, 50);
+}
+.sect .home .right .us {
+  display: inline-block;
+  background-color: rgb(27, 230, 162);
+  border-radius: 25px;
+  text-transform: capitalize;
+  padding: 0.3rem 0.7rem;
+  margin-top: 1rem;
+}
+.sect .home .left {
+  grid-area: right;
+}
+.sect .home .left img {
+  height: 500px;
+}
+
+.about {
+  padding: 5em 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3em;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.about h2 {
+  color: orangered;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+.about h1 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  line-height: 1.2em;
+  margin-bottom: 1rem;
+  font-family: "Dancing script", sans-serif;
+}
+.about p {
+  font-size: 0.9rem;
+  color: rgb(54, 50, 50);
+}
+.about .book {
+  display: inline-block;
+  background-color: rgb(27, 230, 162);
+  border-radius: 25px;
+  text-transform: capitalize;
+  padding: 0.3rem 0.7rem;
+  margin-top: 1rem;
+}
+
+img {
+  height: 500px;
+}
+
+.container {
+  padding: 2em 15%;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(/img/blog.svg);
+}
+.container .menu {
+  margin-top: 5rem;
+}
+.container .menu img {
+  height: 55px;
+  width: auto;
+  box-shadow: 1px 2px 7px rgb(180, 170, 170);
+  border-radius: 50%;
+}
+.container .menu .food {
+  text-align: center;
+}
+.container .menu .food h2 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: red;
+  font-family: "Dancing script";
+}
+.container .menu .food h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 1em;
+}
+.container .menus {
+  margin-top: 2.5rem;
+}
+.container .menus ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+.container .menus ul li {
+  background-color: rgb(251, 242, 242);
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+  padding: 1em;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+.container .menus ul li p {
+  font-size: 0.7rem;
+  color: gray;
+}
+.container .menus ul li .price {
+  color: orange;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.container .menus ul li h4 {
+  text-transform: capitalize;
+}
+.container .menus ul li:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 9px rgb(73, 71, 71);
+}
+.container .menus .reserve-bottom {
+  margin-top: 1.5em;
+  text-align: center;
+}
+.container .menus .reserve-bottom .reserve {
+  display: inline-block;
+  background-color: rgb(27, 230, 162);
+  border-radius: 25px;
+  text-transform: capitalize;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.team {
+  height: 100vh;
+  width: 100%;
+  padding: 8em 15% 0 15%;
+  position: relative;
+}
+.team .img {
+  display: inline-block;
+}
+.team img {
+  height: 80px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgb(158, 149, 149);
+  display: block;
+}
+.team .team-container {
+  text-align: center;
+}
+.team .team-container h3 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: red;
+  font-family: "Dancing script";
+}
+.team .team-container h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 1em;
+}
+.team .bot {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.team .bot ul {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  gap: 2rem;
+  text-align: center;
+  place-content: center;
+}
+.team .bot ul li {
+  background-color: rgb(251, 242, 242);
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+  padding: 0.7em;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+.team .bot ul li:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 9px rgb(73, 71, 71);
+}
+.team .bot ul li p {
+  font-size: 0.7rem;
+  color: gray;
+  text-transform: capitalize;
+}
+.team .bot ul li h4 {
+  text-transform: capitalize;
+}
+.team .bottom {
+  background-color: wheat;
+  border-radius: 10px;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.team .bottom p {
+  font-size: 0.7rem;
+  color: gray;
+  text-transform: capitalize;
+}
+.team .bottom h1 {
+  text-transform: capitalize;
+}
+.team .bottom h4 {
+  text-transform: capitalize;
+  color: orangered;
+}
+.team .bottom .mail {
+  margin-left: 5rem;
+  position: relative;
+}
+.team .bottom .mail #text {
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid green;
+  padding: 0.5em;
+  text-transform: capitalize;
+  position: relative;
+}
+.team .bottom .mail #btn {
+  background-color: green;
+  color: white;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 0.6em 0.7em;
+  position: absolute;
+  right: 0.4px;
+  z-index: 999;
+  text-transform: capitalize;
+  font-weight: 200;
+  cursor: pointer;
+}
+.team .bottom .mail #btn:active {
+  transform: scaleX(1.1);
+  transition: 0.5s all ease-in-out;
+}
+
+.blog {
+  height: 100vh;
+  width: 100%;
+  padding: 8em 15% 0 15%;
+  background-image: url(/img/blog.svg);
+}
+.blog img {
+  height: 200px;
+  border-radius: 20px;
+}
+.blog .blog-top {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.blog .blog-top h3 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: red;
+  font-family: "Dancing script";
+}
+.blog .blog-top h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 1em;
+}
+.blog .blog-bottom ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  place-content: center;
+}
+.blog .blog-bottom ul li {
+  background-color: rgb(255, 253, 248);
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgb(163, 159, 159);
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+.blog .blog-bottom ul li .pic1 {
+  background-image: url(/img/blog1.jpg);
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.blog .blog-bottom ul li .pic2 {
+  background-image: url(/img/blog2.jpg);
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.blog .blog-bottom ul li .pic3 {
+  background-image: url(/img/blog3.jpg);
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.blog .blog-bottom ul li:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 9px rgb(73, 71, 71);
+}
+.blog .blog-bottom .bottom {
+  padding: 1em;
+}
+.blog .blog-bottom .bottom p {
+  font-size: 0.7rem;
+  color: rgb(152, 138, 138);
+}
+.blog .blog-bottom .bottom .date {
+  text-transform: capitalize;
+}
+.blog .blog-bottom .bottom h4 {
+  line-height: 1.5em;
+  font-weight: 500;
+}
+.blog .blog-bottom .bottom a {
+  font-size: 0.9rem;
+  color: green;
+  text-transform: capitalize;
+}
+
+.contact {
+  height: 50vh;
+  width: 100%;
+}
+.contact .bx {
+  cursor: pointer;
+}
+.contact .bx:hover {
+  font-size: 1.5rem;
+  transition: 0.5s all ease;
+}
+.contact ul {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: baseline;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.contact ul h5 {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.contact ul .black {
+  color: green;
+}
+.contact ul a,
+.contact ul p {
+  color: gray;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.contact ul li {
+  margin-right: 2em;
+  padding: 2em;
+}
+.contact ul .menu-link a {
+  display: block;
+  line-height: 1.9rem;
+}
+.contact ul .menu-link a:hover {
+  letter-spacing: 0.1rem;
+  transition: 0.5s all ease;
+  font-weight: bold;
+  color: black;
+}
+.contact ul .our-foods {
+  width: 200px;
+}
+.contact ul .our-foods a {
+  display: block;
+  line-height: 1.9rem;
+}
+.contact ul .our-foods a:hover {
+  letter-spacing: 0.1rem;
+  transition: 0.5s all ease;
+  font-weight: bold;
+  color: black;
+}
+.contact ul .mail {
+  width: 300px;
+}
+.contact ul .mail p {
+  display: inline;
+}
+.contact ul .mail .contact-icons {
+  line-height: 2rem;
+  align-items: baseline;
+}
+
+.nav,
+.sect {
+  -webkit-animation: fadein 2s forwards;
+          animation: fadein 2s forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    transform: translateY(-2em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.container li {
+  -webkit-animation-name: menus;
+          animation-name: menus;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.container {
+  -webkit-animation-name: lights;
+          animation-name: lights;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-blend-mode: color-burn;
+}
+
+@-webkit-keyframes lights {
+  100%, 0% {
+    background-color: rgba(255, 0, 0, 0.123);
+  }
+  8% {
+    background-color: rgba(255, 128, 0, 0.281);
+  }
+  16% {
+    background-color: rgba(255, 255, 0, 0.185);
+  }
+  25% {
+    background-color: rgba(128, 255, 0, 0.404);
+  }
+  33% {
+    background-color: rgba(0, 255, 0, 0.568);
+  }
+  41% {
+    background-color: rgba(0, 255, 128, 0.5);
+  }
+  50% {
+    background-color: rgba(0, 255, 255, 0.452);
+  }
+  58% {
+    background-color: rgba(0, 128, 255, 0.452);
+  }
+  66% {
+    background-color: rgba(0, 0, 255, 0.445);
+  }
+  75% {
+    background-color: rgba(128, 0, 255, 0.384);
+  }
+  83% {
+    background-color: rgba(255, 0, 255, 0.363);
+  }
+  91% {
+    background-color: rgba(255, 0, 128, 0.377);
+  }
+}
+
+@keyframes lights {
+  100%, 0% {
+    background-color: rgba(255, 0, 0, 0.123);
+  }
+  8% {
+    background-color: rgba(255, 128, 0, 0.281);
+  }
+  16% {
+    background-color: rgba(255, 255, 0, 0.185);
+  }
+  25% {
+    background-color: rgba(128, 255, 0, 0.404);
+  }
+  33% {
+    background-color: rgba(0, 255, 0, 0.568);
+  }
+  41% {
+    background-color: rgba(0, 255, 128, 0.5);
+  }
+  50% {
+    background-color: rgba(0, 255, 255, 0.452);
+  }
+  58% {
+    background-color: rgba(0, 128, 255, 0.452);
+  }
+  66% {
+    background-color: rgba(0, 0, 255, 0.445);
+  }
+  75% {
+    background-color: rgba(128, 0, 255, 0.384);
+  }
+  83% {
+    background-color: rgba(255, 0, 255, 0.363);
+  }
+  91% {
+    background-color: rgba(255, 0, 128, 0.377);
+  }
+}
+@media (max-width: 960px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: whitesmoke;
+    padding: 1em;
+    height: 10vh;
+  }
+  .nav .logo img {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .nav .navbar ul {
+    display: flex;
+  }
+  .nav .navbar ul .current {
+    color: rgb(27, 230, 162);
+    font-weight: bold;
+  }
+  .nav .navbar ul .current:hover {
+    font-weight: bold;
+    color: blue;
+    transition: 0.7s ease-in-out;
+  }
+  .nav .navbar ul li {
+    margin-right: 2.5rem;
+  }
+  .nav .navbar ul a {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: blueviolet;
+  }
+  .nav .navbar ul a:hover {
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+  }
+  .nav .btn {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .sect {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/img/blog.svg);
+  }
+  .sect .home {
+    padding: 7em 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3em;
+    grid-template-areas: "left right";
+  }
+  .sect .home .right {
+    grid-area: left;
+  }
+  .sect .home .right h2 {
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+  }
+  .sect .home .right h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    font-family: "Dancing script", sans-serif;
+  }
+  .sect .home .right p {
+    font-size: 0.8rem;
+    color: rgb(54, 50, 50);
+  }
+  .sect .home .right .us {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+  .sect .home .left {
+    grid-area: right;
+  }
+  .sect .home .left img {
+    height: 450px;
+  }
+
+  .about {
+    padding: 7em 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3em;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  .about h2 {
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+  }
+  .about h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    font-family: "Dancing script", sans-serif;
+  }
+  .about p {
+    font-size: 0.7rem;
+    color: rgb(54, 50, 50);
+  }
+  .about .book {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+
+  img {
+    height: 450px;
+  }
+
+  .container {
+    padding: 2em 15%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/img/blog.svg);
+  }
+  .container .menu {
+    margin-top: 5rem;
+  }
+  .container .menu img {
+    height: 55px;
+    width: auto;
+    box-shadow: 1px 2px 7px rgb(180, 170, 170);
+    border-radius: 50%;
+  }
+  .container .menu .food {
+    text-align: center;
+  }
+  .container .menu .food h2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .container .menu .food h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .container .menus {
+    margin-top: 2.5rem;
+  }
+  .container .menus ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+  }
+  .container .menus ul li {
+    background-color: rgb(251, 242, 242);
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+    padding: 0.5em;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+  }
+  .container .menus ul li p {
+    font-size: 0.6rem;
+    color: gray;
+  }
+  .container .menus ul li .price {
+    color: orange;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+  .container .menus ul li h4 {
+    text-transform: capitalize;
+  }
+  .container .menus ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .container .menus .reserve-bottom {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+  .container .menus .reserve-bottom .reserve {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .team {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 15% 0 15%;
+    position: relative;
+  }
+  .team .img {
+    display: inline-block;
+  }
+  .team img {
+    height: 80px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgb(158, 149, 149);
+    display: block;
+  }
+  .team .team-container {
+    text-align: center;
+  }
+  .team .team-container h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .team .team-container h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .team .bot {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .team .bot ul {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 1rem;
+    text-align: center;
+    place-content: center;
+  }
+  .team .bot ul li {
+    background-color: rgb(251, 242, 242);
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+    padding: 0.7em;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+  }
+  .team .bot ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .team .bot ul li p {
+    font-size: 0.7rem;
+    color: gray;
+    text-transform: capitalize;
+  }
+  .team .bot ul li h4 {
+    text-transform: capitalize;
+    font-size: 0.9rem;
+  }
+  .team .bottom {
+    background-color: wheat;
+    border-radius: 10px;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+  .team .bottom p {
+    font-size: 0.7rem;
+    color: gray;
+    text-transform: capitalize;
+  }
+  .team .bottom h1 {
+    text-transform: capitalize;
+  }
+  .team .bottom h4 {
+    text-transform: capitalize;
+    color: orangered;
+  }
+  .team .bottom .mail {
+    margin-left: 5rem;
+    position: relative;
+  }
+  .team .bottom .mail #text {
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid green;
+    padding: 0.5em;
+    text-transform: capitalize;
+    position: relative;
+  }
+  .team .bottom .mail #btn {
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 0.6em 0.7em;
+    position: absolute;
+    right: 0.4px;
+    z-index: 999;
+    text-transform: capitalize;
+    font-weight: 200;
+    cursor: pointer;
+  }
+  .team .bottom .mail #btn:active {
+    transform: scaleX(1.1);
+    transition: 0.5s all ease-in-out;
+  }
+
+  .blog {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 15% 0 15%;
+    background-image: url(/img/blog.svg);
+  }
+  .blog .blog-top {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .blog .blog-top h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .blog .blog-top h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .blog .blog-bottom ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    place-content: center;
+  }
+  .blog .blog-bottom ul li {
+    background-color: rgb(255, 253, 248);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(163, 159, 159);
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+  }
+  .blog .blog-bottom ul li .pic1 {
+    background-image: url(/img/blog1.jpg);
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    background-size: cover;
+  }
+  .blog .blog-bottom ul li .pic2 {
+    background-image: url(/img/blog2.jpg);
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    background-size: cover;
+  }
+  .blog .blog-bottom ul li .pic3 {
+    background-image: url(/img/blog3.jpg);
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    background-size: cover;
+  }
+  .blog .blog-bottom ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .blog .blog-bottom .bottom {
+    padding: 1em;
+  }
+  .blog .blog-bottom .bottom p {
+    font-size: 0.7rem;
+    color: rgb(152, 138, 138);
+  }
+  .blog .blog-bottom .bottom .date {
+    text-transform: capitalize;
+  }
+  .blog .blog-bottom .bottom h4 {
+    line-height: 1.2rem;
+    font-weight: 500;
+  }
+  .blog .blog-bottom .bottom a {
+    font-size: 0.8rem;
+    color: green;
+    text-transform: capitalize;
+  }
+
+  .contact {
+    height: 50vh;
+    width: 100%;
+  }
+  .contact .bx {
+    cursor: pointer;
+  }
+  .contact .bx:hover {
+    font-size: 1.2rem;
+    transition: 0.5s all ease;
+  }
+  .contact ul {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: baseline;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .contact ul h5 {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+  }
+  .contact ul .black {
+    color: green;
+  }
+  .contact ul a,
+.contact ul p {
+    color: gray;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+  }
+  .contact ul li {
+    margin-right: 0.4em;
+    padding: 1em;
+  }
+  .contact ul .menu-link a {
+    display: block;
+    line-height: 1.5rem;
+  }
+  .contact ul .menu-link a:hover {
+    letter-spacing: 0.1rem;
+    transition: 0.5s all ease;
+    font-weight: bold;
+    color: black;
+  }
+  .contact ul .our-foods {
+    width: 130px;
+  }
+  .contact ul .our-foods a {
+    display: block;
+    line-height: 1.9rem;
+  }
+  .contact ul .our-foods a:hover {
+    letter-spacing: 0.1rem;
+    transition: 0.5s all ease;
+    font-weight: bold;
+    color: black;
+  }
+  .contact ul .mail {
+    width: 200px;
+  }
+  .contact ul .mail p {
+    display: inline;
+  }
+  .contact ul .mail .contact-icons {
+    line-height: 2rem;
+    align-items: baseline;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: whitesmoke;
+    padding: 1em;
+    height: 10vh;
+  }
+  .nav .logo img {
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .nav .navbar ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    height: 100vh;
+    width: 50%;
+  }
+  .nav .navbar ul .current {
+    color: rgb(27, 230, 162);
+    font-weight: bold;
+  }
+  .nav .navbar ul .current:hover {
+    font-weight: bold;
+    color: blue;
+    transition: 0.7s ease-in-out;
+  }
+  .nav .navbar ul li {
+    text-align: right;
+    margin: 0;
+    margin-top: 1em;
+  }
+  .nav .navbar ul a {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: black;
+    display: block;
+    padding: 0.6em 3em;
+    line-height: 1em;
+  }
+  .nav .navbar ul a:hover {
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+    background-color: wheat;
+  }
+  .nav .btn {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    font-size: 0.6rem;
+    border: 1px solid red;
+  }
+
+  .sect {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/img/blog.svg);
+    text-align: center;
+  }
+  .sect .home {
+    padding: 7em 10%;
+    display: inline;
+    align-items: center;
+  }
+  .sect .home .right {
+    padding: 2em;
+  }
+  .sect .home .right h2 {
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+  }
+  .sect .home .right h1 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    font-family: "Dancing script", sans-serif;
+  }
+  .sect .home .right p {
+    font-size: 0.7rem;
+    color: rgb(54, 50, 50);
+  }
+  .sect .home .right .us {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+  .sect .home .left img {
+    height: 300px;
+  }
+
+  .about {
+    padding: 7em 2em;
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3em;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .about h2 {
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+  .about h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    font-family: "Dancing script", sans-serif;
+  }
+  .about p {
+    font-size: 0.7rem;
+    color: rgb(54, 50, 50);
+  }
+  .about .book {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .container {
+    padding: 2em 15%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/img/blog.svg);
+  }
+  .container .menu {
+    margin-top: 5rem;
+  }
+  .container .menu img {
+    height: 30px;
+    width: auto;
+    box-shadow: 1px 2px 7px rgb(180, 170, 170);
+    border-radius: 50%;
+  }
+  .container .menu .food {
+    text-align: center;
+  }
+  .container .menu .food h2 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .container .menu .food h1 {
+    font-size: 1.9rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .container .menus {
+    margin-top: 2.5rem;
+  }
+  .container .menus ul {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 0.2;
+  }
+  .container .menus ul li {
+    background-color: rgb(251, 242, 242);
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+    padding: 0.5em;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+  }
+  .container .menus ul li p {
+    font-size: 0.5rem;
+    color: gray;
+  }
+  .container .menus ul li .price {
+    color: orange;
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+  }
+  .container .menus ul li h4 {
+    text-transform: capitalize;
+    font-size: 0.7rem;
+  }
+  .container .menus ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .container .menus .reserve-bottom {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+  .container .menus .reserve-bottom .reserve {
+    display: inline-block;
+    background-color: rgb(27, 230, 162);
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .team {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 2em;
+    position: relative;
+  }
+  .team .img {
+    display: inline-block;
+  }
+  .team img {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgb(158, 149, 149);
+    display: block;
+  }
+  .team .team-container {
+    text-align: center;
+  }
+  .team .team-container h3 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .team .team-container h1 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .team .bot {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .team .bot ul {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 1rem;
+    text-align: center;
+    place-content: center;
+  }
+  .team .bot ul li {
+    background-color: rgb(251, 242, 242);
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+    padding: 0.7em;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+  }
+  .team .bot ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .team .bot ul li p {
+    font-size: 0.5rem;
+    color: gray;
+    text-transform: capitalize;
+  }
+  .team .bot ul li h4 {
+    text-transform: capitalize;
+    font-size: 0.6rem;
+  }
+  .team .bottom {
+    display: block;
+    padding: 1em;
+  }
+  .team .bottom .subscribe {
+    text-align: center;
+  }
+  .team .bottom .subscribe h4 {
+    font-size: 0.7rem;
+  }
+  .team .bottom .subscribe h1 {
+    font-size: 1rem;
+  }
+  .team .bottom .mail {
+    margin: 0;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .team .bottom .mail #text {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 0.1em;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+  .team .bottom .mail #btn {
+    position: static;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.1em;
+  }
+
+  .blog {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 15% 0 15%;
+    background-image: url(/img/blog.svg);
+  }
+  .blog .blog-top {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .blog .blog-top h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: red;
+    font-family: "Dancing script";
+  }
+  .blog .blog-top h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .blog .blog-bottom ul {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1em;
+    place-items: center;
+  }
+  .blog .blog-bottom ul li {
+    background-color: rgb(255, 253, 248);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(163, 159, 159);
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+    width: 190px;
+    margin: auto;
+    margin-top: 2rem;
+    height: auto;
+  }
+  .blog .blog-bottom ul li .pic1 {
+    background-image: url(/img/blog1.jpg);
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .blog .blog-bottom ul li .pic2 {
+    background-image: url(/img/blog2.jpg);
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .blog .blog-bottom ul li .pic3 {
+    background-image: url(/img/blog3.jpg);
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .blog .blog-bottom ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+  }
+  .blog .blog-bottom .bottom {
+    padding: 0.8em;
+  }
+  .blog .blog-bottom .bottom p {
+    font-size: 0.6rem;
+    color: rgb(152, 138, 138);
+  }
+  .blog .blog-bottom .bottom .date {
+    text-transform: capitalize;
+  }
+  .blog .blog-bottom .bottom h4 {
+    line-height: 0.9rem;
+    font-weight: 500;
+  }
+  .blog .blog-bottom .bottom a {
+    font-size: 0.6rem;
+    color: green;
+    text-transform: capitalize;
+  }
+
+  .contact {
+    height: 100vh;
+    width: 100%;
+  }
+  .contact .bx {
+    cursor: pointer;
+  }
+  .contact .bx:hover {
+    font-size: 1rem;
+    transition: 0.5s all ease;
+  }
+  .contact ul {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: baseline;
+    margin-top: 3rem;
+    padding: 0 2em;
+  }
+  .contact ul h5 {
+    text-transform: capitalize;
+    font-size: 0.7rem;
+  }
+  .contact ul .black {
+    color: green;
+  }
+  .contact ul a,
+.contact ul p {
+    color: gray;
+    font-size: 0.6rem;
+    text-transform: capitalize;
+  }
+  .contact ul li {
+    margin-right: 0.3em;
+    padding: 0.5em;
+  }
+  .contact ul .menu-link a {
+    display: block;
+    line-height: 1.2rem;
+  }
+  .contact ul .menu-link a:hover {
+    letter-spacing: 0.1rem;
+    transition: 0.5s all ease;
+    font-weight: bold;
+    color: black;
+  }
+  .contact ul .our-foods {
+    width: 100px;
+  }
+  .contact ul .our-foods a {
+    display: block;
+    line-height: 1.9rem;
+  }
+  .contact ul .our-foods a:hover {
+    letter-spacing: 0.1rem;
+    transition: 0.5s all ease;
+    font-weight: bold;
+    color: black;
+  }
+  .contact ul .mail {
+    width: 300px;
+  }
+  .contact ul .mail p {
+    display: inline;
+  }
+  .contact ul .mail .contact-icons {
+    line-height: 2rem;
+    align-items: baseline;
+  }
+}/*# sourceMappingURL=main.css.map */

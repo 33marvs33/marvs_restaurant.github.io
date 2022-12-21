@@ -1,0 +1,1757 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+// nav section
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;`
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: whitesmoke;
+    padding: 1em;
+    height: 10vh;
+
+    .btn {
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(105%);
+        }
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: flex;
+        .current {
+            color: rgb(27, 230, 162);
+            font-weight: bold;
+            transition: font-weight 3s, color 0.5s;
+
+            &:hover {
+                font-weight: bold;
+                color: blue;
+            }
+        }
+        li {
+            margin-right: 4rem;
+            position: relative;
+        }
+
+        a {
+            text-transform: capitalize;
+            font-size: 0.9rem;
+            color: blueviolet;
+            transition: letter-spacing 0.3s ease-in-out;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: red;
+                height: 1px;
+                width: 0%;
+                bottom: 0;
+                left: 0;
+                transition: width 0.5s;
+            }
+
+            &:hover::before {
+                content: "";
+                position: absolute;
+                background-color: red;
+                height: 1px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover {
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+    .btn {
+        display: inline-block;
+        background-color: rgb(27, 230, 162);
+        border-radius: 25px;
+        text-transform: capitalize;
+        padding: 0.3rem 0.7rem;
+        color: white;
+    }
+}
+
+// homesection/
+
+.sect {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(blog.svg);
+
+    .home {
+        padding: 5em 15%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 3em;
+        grid-template-areas: "left right";
+
+        .right {
+            grid-area: left;
+
+            h2 {
+                color: orangered;
+                text-transform: capitalize;
+                font-size: 1.8rem;
+            }
+            h1 {
+                font-size: 4.5rem;
+                text-transform: capitalize;
+                line-height: 1.2em;
+                margin-bottom: 1rem;
+                font-family: "Dancing script", sans-serif;
+            }
+            p {
+                font-size: 0.9rem;
+                color: rgb(54, 50, 50);
+            }
+
+            .us {
+                display: inline-block;
+                background-color: rgb(27, 230, 162);
+                border-radius: 25px;
+                text-transform: capitalize;
+                padding: 0.3rem 0.7rem;
+                margin-top: 1rem;
+            }
+        }
+
+        .left {
+            grid-area: right;
+            img {
+                height: 500px;
+            }
+        }
+    }
+}
+
+// about section//
+
+.about {
+    padding: 5em 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3em;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    h2 {
+        color: orangered;
+        text-transform: capitalize;
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 4.5rem;
+        text-transform: capitalize;
+        line-height: 1.2em;
+        margin-bottom: 1rem;
+        font-family: "Dancing script", sans-serif;
+    }
+    p {
+        font-size: 0.9rem;
+        color: rgb(54, 50, 50);
+    }
+
+    .book {
+        display: inline-block;
+        background-color: rgb(27, 230, 162);
+        border-radius: 25px;
+        text-transform: capitalize;
+        padding: 0.3rem 0.7rem;
+        margin-top: 1rem;
+    }
+}
+
+img {
+    height: 500px;
+}
+
+// menu-section//
+.container {
+    padding: 2em 15%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(blog.svg);
+    .menu {
+        margin-top: 5rem;
+        img {
+            height: 55px;
+            width: auto;
+            box-shadow: 1px 2px 7px rgb(180, 170, 170);
+            border-radius: 50%;
+        }
+        .food {
+            text-align: center;
+
+            h2 {
+                font-size: 1.8rem;
+                text-transform: capitalize;
+                color: red;
+                font-family: "Dancing script";
+            }
+            h1 {
+                font-size: 2.5rem;
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+    }
+    .menus {
+        margin-top: 2.5rem;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5em;
+
+            li {
+                background-color: rgb(251, 242, 242);
+                border-radius: 20px;
+                box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                padding: 1em;
+                transition: 0.4s all ease-in-out;
+                cursor: pointer;
+
+                p {
+                    font-size: 0.7rem;
+                    color: gray;
+                }
+                .price {
+                    color: orange;
+                    font-size: 1rem;
+                    margin-top: 0.2rem;
+                }
+                h4 {
+                    text-transform: capitalize;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                }
+            }
+        }
+
+        .reserve-bottom {
+            margin-top: 1.5em;
+            text-align: center;
+
+            .reserve {
+                display: inline-block;
+                background-color: rgb(27, 230, 162);
+                border-radius: 25px;
+                text-transform: capitalize;
+                padding: 0.3rem 0.7rem;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// team section//
+
+.team {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 15% 0 15%;
+    position: relative;
+
+    .img {
+        display: inline-block;
+    }
+
+    img {
+        height: 80px;
+        width: auto;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px rgb(158, 149, 149);
+        display: block;
+    }
+
+    .team-container {
+        text-align: center;
+        h3 {
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            color: red;
+            font-family: "Dancing script";
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            line-height: 1em;
+        }
+    }
+
+    .bot {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            gap: 2rem;
+            text-align: center;
+            place-content: center;
+
+            li {
+                background-color: rgb(251, 242, 242);
+                border-radius: 20px;
+                box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                padding: 0.7em;
+                transition: 0.4s all ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                }
+
+                p {
+                    font-size: 0.7rem;
+                    color: gray;
+                    text-transform: capitalize;
+                }
+                h4 {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        background-color: wheat;
+        border-radius: 10px;
+        display: flex;
+        padding: 2rem;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        p {
+            font-size: 0.7rem;
+            color: gray;
+            text-transform: capitalize;
+        }
+        h1 {
+            text-transform: capitalize;
+        }
+
+        h4 {
+            text-transform: capitalize;
+            color: orangered;
+        }
+
+        .mail {
+            margin-left: 5rem;
+            position: relative;
+
+            #text {
+                border-radius: 25px;
+                outline: none;
+                border: 1px solid green;
+                padding: 0.5em;
+                text-transform: capitalize;
+                position: relative;
+            }
+
+            #btn {
+                background-color: green;
+                color: white;
+                border-radius: 25px;
+                outline: none;
+                border: none;
+                padding: 0.6em 0.7em;
+                position: absolute;
+                right: 0.4px;
+                z-index: 999;
+                text-transform: capitalize;
+                font-weight: 200;
+                cursor: pointer;
+                &:active {
+                    transform: scaleX(1.1);
+                    transition: 0.5s all ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// blog section//
+.blog {
+    height: 100vh;
+    width: 100%;
+    padding: 8em 15% 0 15%;
+    background-image: url(blog.svg);
+
+    img {
+        height: 200px;
+        border-radius: 20px;
+    }
+    .blog-top {
+        text-align: center;
+        margin-bottom: 3rem;
+        h3 {
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            color: red;
+            font-family: "Dancing script";
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            line-height: 1em;
+        }
+    }
+
+    .blog-bottom {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2em;
+            place-content: center;
+
+            li {
+                background-color: rgb(255, 253, 248);
+                border-radius: 20px;
+                box-shadow: 1px 1px 5px rgb(163, 159, 159);
+                transition: 0.4s all ease-in-out;
+                cursor: pointer;
+
+                .pic1 {
+                    background-image: url(blog1.jpg);
+                    height: 200px;
+                    border-radius: 20px 20px 0 0;
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                .pic2 {
+                    background-image: url(blog2.jpg);
+                    height: 200px;
+                    border-radius: 20px 20px 0 0;
+                    background-position: center;
+                    background-size: cover;
+                }
+                .pic3 {
+                    background-image: url(blog3.jpg);
+                    height: 200px;
+                    border-radius: 20px 20px 0 0;
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                }
+            }
+        }
+
+        .bottom {
+            padding: 1em;
+
+            p {
+                font-size: 0.7rem;
+                color: rgb(152, 138, 138);
+            }
+
+            .date {
+                text-transform: capitalize;
+            }
+            h4 {
+                line-height: 1.5em;
+                font-weight: 500;
+            }
+            a {
+                font-size: 0.9rem;
+                color: green;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+// contact section//
+
+.contact {
+    height: 50vh;
+    width: 100%;
+
+    .bx {
+        cursor: pointer;
+
+        &:hover {
+            font-size: 1.5rem;
+            transition: 0.5s all ease;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        align-items: baseline;
+        gap: 5rem;
+        margin-top: 3rem;
+
+        h5 {
+            text-transform: capitalize;
+            font-size: 1rem;
+        }
+
+        .black {
+            color: green;
+        }
+
+        a,
+        p {
+            color: gray;
+            font-size: 0.8rem;
+            text-transform: capitalize;
+        }
+
+        li {
+            margin-right: 2em;
+            padding: 2em;
+        }
+
+        .menu-link {
+            a {
+                display: block;
+                line-height: 1.9rem;
+
+                &:hover {
+                    letter-spacing: 0.1rem;
+                    transition: 0.5s all ease;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+
+        .our-foods {
+            width: 200px;
+            a {
+                display: block;
+                line-height: 1.9rem;
+                &:hover {
+                    letter-spacing: 0.1rem;
+                    transition: 0.5s all ease;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+
+        .mail {
+            width: 300px;
+            p {
+                display: inline;
+            }
+
+            .contact-icons {
+                line-height: 2rem;
+                align-items: baseline;
+            }
+        }
+    }
+}
+
+// animation section//
+
+.nav,
+.sect {
+    animation: fadein 2s forwards;
+}
+@keyframes fadein {
+    from {
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    li {
+        animation-name: menus;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.container {
+    animation-name: lights;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    background-blend-mode:color-burn;
+
+    
+}
+@keyframes lights{
+    100%,0%{
+        background-color: rgba(255, 0, 0, 0.123);
+    }
+    8%{
+        background-color: rgba(255, 128, 0, 0.281);
+    }
+    16%{
+        background-color: rgba(255, 255, 0, 0.185);
+    }
+    25%{
+        background-color: rgba(128, 255, 0, 0.404);
+    }
+    33%{
+        background-color: rgba(0, 255, 0, 0.568);
+    }
+    41%{
+        background-color: rgba(0, 255, 128, 0.5);
+    }
+    50%{
+        background-color: rgba(0, 255, 255, 0.452);
+    }
+    58%{
+        background-color: rgba(0, 128, 255, 0.452);
+    }
+    66%{
+        background-color: rgba(0, 0, 255, 0.445);
+    }
+    75%{
+        background-color: rgba(128, 0, 255, 0.384);
+    }
+    83%{
+        background-color: rgba(255, 0, 255, 0.363);
+    }
+    91%{
+        background-color: rgba(255, 0, 128, 0.377);
+    }
+}
+
+// tablet //
+@media (max-width: 960px) {
+    // nav section//
+
+    .nav {
+        .logo img {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: whitesmoke;
+        padding: 1em;
+        height: 10vh;
+
+        .navbar ul {
+            display: flex;
+            .current {
+                color: rgb(27, 230, 162);
+                font-weight: bold;
+
+                &:hover {
+                    font-weight: bold;
+                    color: blue;
+                    transition: 0.7s ease-in-out;
+                }
+            }
+            li {
+                margin-right: 2.5rem;
+            }
+
+            a {
+                text-transform: capitalize;
+                font-size: 0.8rem;
+                color: blueviolet;
+
+                &:hover {
+                    font-weight: bold;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
+        .btn {
+            display: inline-block;
+            background-color: rgb(27, 230, 162);
+            border-radius: 25px;
+            text-transform: capitalize;
+            padding: 0.2rem 0.5rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+
+    // home section//
+
+    .sect {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-image: url(blog.svg);
+
+        .home {
+            padding: 7em 10%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3em;
+            grid-template-areas: "left right";
+
+            .right {
+                grid-area: left;
+
+                h2 {
+                    color: orangered;
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                }
+                h1 {
+                    font-size: 3rem;
+                    text-transform: capitalize;
+                    line-height: 1.2em;
+                    margin-bottom: 1rem;
+                    font-family: "Dancing script", sans-serif;
+                }
+                p {
+                    font-size: 0.8rem;
+                    color: rgb(54, 50, 50);
+                }
+
+                .us {
+                    display: inline-block;
+                    background-color: rgb(27, 230, 162);
+                    border-radius: 25px;
+                    text-transform: capitalize;
+                    padding: 0.3rem 0.7rem;
+                    margin-top: 1rem;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .left {
+                grid-area: right;
+                img {
+                    height: 450px;
+                }
+            }
+        }
+    }
+
+    // about section//
+    .about {
+        padding: 7em 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 3em;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+        h2 {
+            color: orangered;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+        }
+        h1 {
+            font-size: 3rem;
+            text-transform: capitalize;
+            line-height: 1.2em;
+            margin-bottom: 1rem;
+            font-family: "Dancing script", sans-serif;
+        }
+        p {
+            font-size: 0.7rem;
+            color: rgb(54, 50, 50);
+        }
+
+        .book {
+            display: inline-block;
+            background-color: rgb(27, 230, 162);
+            border-radius: 25px;
+            text-transform: capitalize;
+            padding: 0.3rem 0.7rem;
+            margin-top: 1rem;
+            font-size: 0.7rem;
+        }
+    }
+
+    img {
+        height: 450px;
+    }
+
+    // menu section//
+
+    .container {
+        padding: 2em 15%;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-image: url(blog.svg);
+        .menu {
+            margin-top: 5rem;
+            img {
+                height: 55px;
+                width: auto;
+                box-shadow: 1px 2px 7px rgb(180, 170, 170);
+                border-radius: 50%;
+            }
+            .food {
+                text-align: center;
+
+                h2 {
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    color: red;
+                    font-family: "Dancing script";
+                }
+                h1 {
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                    line-height: 1em;
+                }
+            }
+        }
+        .menus {
+            margin-top: 2.5rem;
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5em;
+
+                li {
+                    background-color: rgb(251, 242, 242);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                    padding: 0.5em;
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+
+                    p {
+                        font-size: 0.6rem;
+                        color: gray;
+                    }
+                    .price {
+                        color: orange;
+                        font-size: 1rem;
+                        margin-top: 0.2rem;
+                    }
+                    h4 {
+                        text-transform: capitalize;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+                }
+            }
+
+            .reserve-bottom {
+                margin-top: 1.5em;
+                text-align: center;
+
+                .reserve {
+                    display: inline-block;
+                    background-color: rgb(27, 230, 162);
+                    border-radius: 25px;
+                    text-transform: capitalize;
+                    padding: 0.3rem 0.7rem;
+                    font-size: 0.7rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    // team section//
+
+    .team {
+        height: 100vh;
+        width: 100%;
+        padding: 8em 15% 0 15%;
+        position: relative;
+
+        .img {
+            display: inline-block;
+        }
+
+        img {
+            height: 80px;
+            width: auto;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgb(158, 149, 149);
+            display: block;
+        }
+
+        .team-container {
+            text-align: center;
+            h3 {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                color: red;
+                font-family: "Dancing script";
+            }
+            h1 {
+                font-size: 2rem;
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+
+        .bot {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(4, 20%);
+                gap: 1rem;
+                text-align: center;
+                place-content: center;
+
+                li {
+                    background-color: rgb(251, 242, 242);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                    padding: 0.7em;
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+
+                    p {
+                        font-size: 0.7rem;
+                        color: gray;
+                        text-transform: capitalize;
+                    }
+                    h4 {
+                        text-transform: capitalize;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            background-color: wheat;
+            border-radius: 10px;
+            display: flex;
+            padding: 2rem;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+
+            p {
+                font-size: 0.7rem;
+                color: gray;
+                text-transform: capitalize;
+            }
+            h1 {
+                text-transform: capitalize;
+            }
+
+            h4 {
+                text-transform: capitalize;
+                color: orangered;
+            }
+
+            .mail {
+                margin-left: 5rem;
+                position: relative;
+
+                #text {
+                    border-radius: 25px;
+                    outline: none;
+                    border: 1px solid green;
+                    padding: 0.5em;
+                    text-transform: capitalize;
+                    position: relative;
+                }
+
+                #btn {
+                    background-color: green;
+                    color: white;
+                    border-radius: 25px;
+                    outline: none;
+                    border: none;
+                    padding: 0.6em 0.7em;
+                    position: absolute;
+                    right: 0.4px;
+                    z-index: 999;
+                    text-transform: capitalize;
+                    font-weight: 200;
+                    cursor: pointer;
+                    &:active {
+                        transform: scaleX(1.1);
+                        transition: 0.5s all ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    // blog section//
+    .blog {
+        height: 100vh;
+        width: 100%;
+        padding: 8em 15% 0 15%;
+        background-image: url(blog.svg);
+
+        .blog-top {
+            text-align: center;
+            margin-bottom: 3rem;
+            h3 {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                color: red;
+                font-family: "Dancing script";
+            }
+            h1 {
+                font-size: 2rem;
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+
+        .blog-bottom {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2em;
+                place-content: center;
+
+                li {
+                    background-color: rgb(255, 253, 248);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 5px rgb(163, 159, 159);
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+
+                    .pic1 {
+                        background-image: url(blog1.jpg);
+                        height: 150px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    .pic2 {
+                        background-image: url(blog2.jpg);
+                        height: 150px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .pic3 {
+                        background-image: url(blog3.jpg);
+                        height: 150px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+                }
+            }
+
+            .bottom {
+                padding: 1em;
+
+                p {
+                    font-size: 0.7rem;
+                    color: rgb(152, 138, 138);
+                }
+
+                .date {
+                    text-transform: capitalize;
+                }
+                h4 {
+                    line-height: 1.2rem;
+                    font-weight: 500;
+                }
+                a {
+                    font-size: 0.8rem;
+                    color: green;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    // contact section//
+    .contact {
+        height: 50vh;
+        width: 100%;
+
+        .bx {
+            cursor: pointer;
+
+            &:hover {
+                font-size: 1.2rem;
+                transition: 0.5s all ease;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            align-items: baseline;
+            gap: 1rem;
+            margin-top: 3rem;
+
+            h5 {
+                text-transform: capitalize;
+                font-size: 0.8rem;
+            }
+
+            .black {
+                color: green;
+            }
+
+            a,
+            p {
+                color: gray;
+                font-size: 0.7rem;
+                text-transform: capitalize;
+            }
+
+            li {
+                margin-right: 0.4em;
+                padding: 1em;
+            }
+
+            .menu-link {
+                a {
+                    display: block;
+                    line-height: 1.5rem;
+
+                    &:hover {
+                        letter-spacing: 0.1rem;
+                        transition: 0.5s all ease;
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+
+            .our-foods {
+                width: 130px;
+                a {
+                    display: block;
+                    line-height: 1.9rem;
+                    &:hover {
+                        letter-spacing: 0.1rem;
+                        transition: 0.5s all ease;
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+
+            .mail {
+                width: 200px;
+                p {
+                    display: inline;
+                }
+
+                .contact-icons {
+                    line-height: 2rem;
+                    align-items: baseline;
+                }
+            }
+        }
+    }
+}
+
+// mobile section//
+
+@media (max-width: 480px) {
+    // nav section//
+
+    .nav {
+        .logo img {
+            width: 100px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: whitesmoke;
+        padding: 1em;
+        height: 10vh;
+
+        .navbar ul {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: gray;
+            height: 100vh;
+            width: 50%;
+            .current {
+                color: rgb(27, 230, 162);
+                font-weight: bold;
+
+                &:hover {
+                    font-weight: bold;
+                    color: blue;
+                    transition: 0.7s ease-in-out;
+                }
+            }
+            li {
+                text-align: right;
+                margin: 0;
+                margin-top: 1em;
+            }
+
+            a {
+                text-transform: capitalize;
+                font-size: 0.8rem;
+                color: black;
+                display: block;
+                padding: 0.6em 3em;
+                line-height: 1em;
+
+                &:hover {
+                    font-weight: bold;
+                    transition: 0.5s ease-in-out;
+                    background-color: wheat;
+                }
+            }
+        }
+        .btn {
+            display: inline-block;
+            background-color: rgb(27, 230, 162);
+            border-radius: 25px;
+            text-transform: capitalize;
+            padding: 0.2rem 0.5rem;
+            color: white;
+            font-size: 0.6rem;
+            border: 1px solid red;
+        }
+    }
+
+    // home section//
+
+    .sect {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-image: url(blog.svg);
+        text-align: center;
+
+        .home {
+            padding: 7em 10%;
+            display: inline;
+            align-items: center;
+
+            .right {
+                padding: 2em;
+
+                h2 {
+                    color: orangered;
+                    text-transform: capitalize;
+                    font-size: 1.3rem;
+                }
+                h1 {
+                    font-size: 2.2rem;
+                    text-transform: capitalize;
+                    line-height: 1.2em;
+                    margin-bottom: 1rem;
+                    font-family: "Dancing script", sans-serif;
+                }
+                p {
+                    font-size: 0.7rem;
+                    color: rgb(54, 50, 50);
+                }
+
+                .us {
+                    display: inline-block;
+                    background-color: rgb(27, 230, 162);
+                    border-radius: 25px;
+                    text-transform: capitalize;
+                    padding: 0.3rem 0.7rem;
+                    margin-top: 1rem;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .left {
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    // about section//
+    .about {
+        padding: 7em 2em;
+        display: block;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 3em;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        text-align: center;
+
+        h2 {
+            color: orangered;
+            text-transform: capitalize;
+            font-size: 1.2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            line-height: 1.2em;
+            margin-bottom: 1rem;
+            font-family: "Dancing script", sans-serif;
+        }
+        p {
+            font-size: 0.7rem;
+            color: rgb(54, 50, 50);
+        }
+
+        .book {
+            display: inline-block;
+            background-color: rgb(27, 230, 162);
+            border-radius: 25px;
+            text-transform: capitalize;
+            padding: 0.3rem 0.7rem;
+            margin-top: 1rem;
+            font-size: 0.7rem;
+        }
+    }
+
+    img {
+        height: 300px;
+    }
+
+    // menu section//
+
+    .container {
+        padding: 2em 15%;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-image: url(blog.svg);
+        .menu {
+            margin-top: 5rem;
+            img {
+                height: 30px;
+                width: auto;
+                box-shadow: 1px 2px 7px rgb(180, 170, 170);
+                border-radius: 50%;
+            }
+            .food {
+                text-align: center;
+
+                h2 {
+                    font-size: 1.8rem;
+                    text-transform: capitalize;
+                    color: red;
+                    font-family: "Dancing script";
+                }
+                h1 {
+                    font-size: 1.9rem;
+                    text-transform: capitalize;
+                    line-height: 1em;
+                }
+            }
+        }
+        .menus {
+            margin-top: 2.5rem;
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                gap: 0.2;
+
+                li {
+                    background-color: rgb(251, 242, 242);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                    padding: 0.5em;
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+
+                    p {
+                        font-size: 0.5rem;
+                        color: gray;
+                    }
+                    .price {
+                        color: orange;
+                        font-size: 0.6rem;
+                        margin-top: 0.2rem;
+                    }
+                    h4 {
+                        text-transform: capitalize;
+                        font-size: 0.7rem;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+                }
+            }
+
+            .reserve-bottom {
+                margin-top: 1.5em;
+                text-align: center;
+
+                .reserve {
+                    display: inline-block;
+                    background-color: rgb(27, 230, 162);
+                    border-radius: 25px;
+                    text-transform: capitalize;
+                    padding: 0.3rem 0.7rem;
+                    font-size: 0.7rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    // team section//
+
+    .team {
+        height: 100vh;
+        width: 100%;
+        padding: 8em 2em;
+        position: relative;
+
+        .img {
+            display: inline-block;
+        }
+
+        img {
+            height: 30px;
+            width: auto;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px rgb(158, 149, 149);
+            display: block;
+        }
+
+        .team-container {
+            text-align: center;
+            h3 {
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                color: red;
+                font-family: "Dancing script";
+            }
+            h1 {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+
+        .bot {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(4, 20%);
+                gap: 1rem;
+                text-align: center;
+                place-content: center;
+
+                li {
+                    background-color: rgb(251, 242, 242);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.331);
+                    padding: 0.7em;
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+
+                    p {
+                        font-size: 0.5rem;
+                        color: gray;
+                        text-transform: capitalize;
+                    }
+                    h4 {
+                        text-transform: capitalize;
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+        .bottom {
+            display: block;
+            padding: 1em;
+
+            .subscribe {
+                text-align: center;
+
+                h4 {
+                    font-size: 0.7rem;
+                }
+                h1 {
+                    font-size: 1rem;
+                }
+            }
+
+            .mail {
+                margin: 0;
+                text-align: center;
+                margin-top: 1em;
+
+                #text {
+                    width: 100%;
+                    display: block;
+                    margin: auto;
+                    padding: 0.1em;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin-bottom: 0.2em;
+                }
+
+                #btn {
+                    position: static;
+                    border-radius: 5px;
+                    width: 100%;
+                    padding: 0.1em;
+                }
+            }
+        }
+    }
+
+    // blog section//
+    .blog {
+        height: 100vh;
+        width: 100%;
+        padding: 8em 15% 0 15%;
+        background-image: url(blog.svg);
+
+        .blog-top {
+            text-align: center;
+            margin-bottom: 2rem;
+            h3 {
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                color: red;
+                font-family: "Dancing script";
+            }
+            h1 {
+                font-size: 2rem;
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+
+        .blog-bottom {
+            ul {
+                display: grid;
+                grid-template-rows: auto;
+                gap: 1em;
+                place-items: center;
+
+                li {
+                    background-color: rgb(255, 253, 248);
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 5px rgb(163, 159, 159);
+                    transition: 0.4s all ease-in-out;
+                    cursor: pointer;
+                    width: 190px;
+                    margin: auto;
+                    margin-top: 2rem;
+                    height: auto;
+
+                    .pic1 {
+                        background-image: url(blog1.jpg);
+                        height: 100px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        object-fit: cover;
+                    }
+
+                    .pic2 {
+                        background-image: url(blog2.jpg);
+                        height: 100px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        object-fit: cover;
+                    }
+                    .pic3 {
+                        background-image: url(blog3.jpg);
+                        height: 100px;
+                        border-radius: 20px 20px 0 0;
+                        background-position: center;
+                        object-fit: cover;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 1px 1px 9px rgb(73, 71, 71);
+                    }
+                }
+            }
+
+            .bottom {
+                padding: 0.8em;
+
+                p {
+                    font-size: 0.6rem;
+                    color: rgb(152, 138, 138);
+                }
+
+                .date {
+                    text-transform: capitalize;
+                }
+                h4 {
+                    line-height: 0.9rem;
+                    font-weight: 500;
+                }
+                a {
+                    font-size: 0.6rem;
+                    color: green;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    // contact section//
+    .contact {
+        height: 100vh;
+        width: 100%;
+
+        .bx {
+            cursor: pointer;
+
+            &:hover {
+                font-size: 1rem;
+                transition: 0.5s all ease;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: baseline;
+            margin-top: 3rem;
+            padding: 0 2em;
+
+            h5 {
+                text-transform: capitalize;
+                font-size: 0.7rem;
+            }
+
+            .black {
+                color: green;
+            }
+
+            a,
+            p {
+                color: gray;
+                font-size: 0.6rem;
+                text-transform: capitalize;
+            }
+
+            li {
+                margin-right: 0.3em;
+                padding: 0.5em;
+            }
+
+            .menu-link {
+                a {
+                    display: block;
+                    line-height: 1.2rem;
+
+                    &:hover {
+                        letter-spacing: 0.1rem;
+                        transition: 0.5s all ease;
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+
+            .our-foods {
+                width: 100px;
+                a {
+                    display: block;
+                    line-height: 1.9rem;
+                    &:hover {
+                        letter-spacing: 0.1rem;
+                        transition: 0.5s all ease;
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+
+            .mail {
+                width: 300px;
+                p {
+                    display: inline;
+                }
+
+                .contact-icons {
+                    line-height: 2rem;
+                    align-items: baseline;
+                }
+            }
+        }
+    }
+}
